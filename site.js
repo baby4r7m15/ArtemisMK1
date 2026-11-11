@@ -56,63 +56,60 @@ function fillHeaderFooter(config) {
 }
 
 /* A single HUD-ring frame (rotating dashed ring + corner ticks) wraps a
-   harness-specific modular configuration icon in the middle. Same frame every
-   season; only the icon vectors and the accent colors change. */
+   seasonally adaptable blueprint line drawing modeled directly off the 
+   modular chest harness structure. Only the accent styles change. */
 function heroArt(season) {
-  const icons = {
-    // Spring Theme: X-strap layout with soft floral alignment points
-    spring: `
-      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M110 110 L210 210 M210 110 L110 210"/>
-        <circle cx="160" cy="160" r="14" stroke="var(--accent)" stroke-width="2.5" fill="none"/>
-        <line x1="160" y1="95" x2="160" y2="120" stroke="var(--accent-2)" />
-        <line x1="160" y1="200" x2="160" y2="225" stroke="var(--accent-2)" />
-        <circle cx="110" cy="110" r="4" fill="var(--accent-2)" stroke="none"/>
-        <circle cx="210" cy="110" r="4" fill="var(--accent-2)" stroke="none"/>
-      </g>`,
-    // Summer Theme: Heavy vertical dual-strap cage style with center harness ring
-    summer: `
-      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M130 90 L130 230 M190 90 L190 230"/>
-        <path d="M110 130 L210 130 M110 190 L210 190"/>
-        <circle cx="130" cy="130" r="5" fill="var(--accent-2)" stroke="none"/>
-        <circle cx="190" cy="130" r="5" fill="var(--accent-2)" stroke="none"/>
-        <circle cx="130" cy="190" r="5" fill="var(--accent-2)" stroke="none"/>
-        <circle cx="190" cy="190" r="5" fill="var(--accent-2)" stroke="none"/>
-      </g>`,
-    // Autumn Theme: Asymmetrical cross-chest dynamic frame setup (MK 1 Beta modular layout)
-    autumn: `
-      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M120 100 C150 130, 160 150, 200 220"/>
-        <path d="M120 150 C150 150, 170 140, 200 100"/>
-        <path d="M100 190 L220 190"/>
-        <circle cx="160" cy="148" r="8" stroke="var(--accent-2)" stroke-width="2"/>
-        <circle cx="120" cy="100" r="4" fill="var(--accent)" stroke="none"/>
-        <circle cx="200" cy="100" r="4" fill="var(--accent-2)" stroke="none"/>
-      </g>`,
-    // Winter Theme: Multi-point heavy geometric interlocking overlay structure
-    winter: `
-      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <polygon points="160,85 215,130 160,235 105,130" stroke="var(--accent)"/>
-        <line x1="105" y1="130" x2="215" y2="130" stroke="var(--accent-2)" stroke-dasharray="4 4"/>
-        <circle cx="160" cy="130" r="10" stroke="var(--accent)" fill="none"/>
-        <circle cx="160" cy="85" r="4" fill="var(--accent-2)" stroke="none"/>
-        <circle cx="160" cy="235" r="4" fill="var(--accent-2)" stroke="none"/>
-      </g>`,
-  };
-
   return `
-    <svg viewBox="0 0 320 320" fill="none" xmlns="http://w3.org" role="img" aria-label="Rotating system status ring with a seasonal configuration schematic">
+    <svg viewBox="0 0 320 320" fill="none" xmlns="http://w3.org" role="img" aria-label="Rotating system status ring with a technical harness schematic">
+      <!-- Outer Rotating UI Status Framework (Preserved) -->
       <g class="hud-ring-rotate" style="transform-origin:160px 160px;">
         <circle cx="160" cy="160" r="140" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="2 8"/>
       </g>
-      <circle cx="160" cy="160" r="112" stroke="var(--accent)" stroke-width="1.5" opacity="0.5"/>
+      <circle cx="160" cy="160" r="112" stroke="var(--accent)" stroke-width="1.5" opacity="0.4"/>
       <g stroke="var(--accent-2)" stroke-width="2">
         <path d="M160 20 L160 40 M160 280 L160 300 M20 160 L40 160 M280 160 L300 160"/>
       </g>
-      ${icons[season]}
+
+      <!-- Accurate Custom Harness Line-Art Group -->
+      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        
+        <!-- Main Upper Back & Padded Yoke Silhouette -->
+        <path d="M120 70 C140 75, 180 75, 200 70 C225 65, 240 85, 235 110 C230 130, 205 165, 195 190 C185 215, 135 215, 125 190 C115 165, 90 130, 85 110 C80 85, 95 65, 120 70 Z" opacity="0.3" stroke-width="1.5" stroke-dasharray="3 3"/>
+        
+        <!-- Yoke Padding Grid Gridlines Matrix -->
+        <path d="M160 73 L160 213 M132 105 C150 108, 170 108, 188 105 M112 145 C140 150, 180 150, 208 145 M112 180 C140 183, 180 183, 208 180" stroke-width="1" opacity="0.4"/>
+
+        <!-- Primary Left and Right Shoulder Straps -->
+        <path d="M110 70 L145 155 L150 210" />
+        <path d="M210 70 L175 155 L170 210" />
+
+        <!-- Dual Top Shoulder Adjustment Buckles -->
+        <rect x="100" y="95" width="16" height="12" rx="2" stroke="var(--accent-2)" stroke-width="2"/>
+        <line x1="100" y1="101" x2="116" y2="101" stroke="var(--accent-2)"/>
+        
+        <rect x="204" y="95" width="16" height="12" rx="2" stroke="var(--accent-2)" stroke-width="2"/>
+        <line x1="204" y1="101" x2="220" y2="101" stroke="var(--accent-2)"/>
+
+        <!-- Middle Sternum Cross-Straps & Lower Girth Line -->
+        <path d="M92 195 L145 195 M175 195 L228 195" />
+        
+        <!-- Left and Right Heavy Duty Base Webbing Buckles -->
+        <rect x="124" y="188" width="16" height="14" rx="2" stroke="var(--accent)" stroke-width="2"/>
+        <rect x="180" y="188" width="16" height="14" rx="2" stroke="var(--accent)" stroke-width="2"/>
+
+        <!-- Central Sternal Attachment Loop (Vertical Drop Tab) -->
+        <rect x="151" y="170" width="18" height="45" rx="3" stroke="var(--accent-2)" stroke-width="2.5" fill="none"/>
+        <line x1="151" y1="185" x2="169" y2="185" stroke="var(--accent-2)" stroke-width="1.5"/>
+        <line x1="151" y1="200" x2="169" y2="200" stroke="var(--accent-2)" stroke-width="1.5"/>
+
+        <!-- Bottom Security Locking Anchoring Carabiner Clip -->
+        <path d="M148 215 C140 225, 140 245, 150 255 C160 265, 175 265, 182 250 C188 238, 180 220, 168 215" stroke="var(--accent)" stroke-width="3"/>
+        <!-- Screw Gate Lock Assembly Nut Detail -->
+        <rect x="168" y="222" width="10" height="18" rx="1" fill="var(--accent-2)" stroke="none"/>
+      </g>
     </svg>`;
 }
+
 
 /* Dynamically populates the item grid with badges and pricing rules 
    filtering solely by the active seasonal inventory array */
