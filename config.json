@@ -18,12 +18,40 @@
     "address": "Serving Boise and Meridian Idaho",
     "hours": "Temporarily Closed"
   },
-
   "season": {
     "_comment": "Dates are MM-DD, compared against today's date. Each season runs from its own start date up to the next season's start date, in order spring -> summer -> autumn -> winter -> spring. Change any of these to shift when the site's theme switches.",
     "springStart": "03-01",
     "summerStart": "06-01",
     "autumnStart": "09-01",
     "winterStart": "11-09"
-  }
+  },
+  "products": [
+    {
+      "id": "classic-pink",
+      "title": "Classic Pink Harness",
+      "season": "autumn",
+      "price": "$65.00",
+      "image": "images/pink-harness.jpg",
+      "badge": "In Stock",
+      "badgeType": "stock"
+    },
+    {
+      "id": "modular-beta",
+      "title": "MK 1 Beta Modular Set",
+      "season": "autumn",
+      "price": "$110.00",
+      "image": "images/modular-beta.jpg",
+      "badge": "Limited Edition",
+      "badgeType": "limited"
+    },
+    {
+      "id": "winter-frost",
+      "title": "Frost Guard Edition",
+      "season": "winter",
+      "price": "$75.00",
+      "image": "images/winter-frost.jpg",
+      "badge": "Pre-Order",
+      "badgeType": "type"
+    }
+  ]
 }
