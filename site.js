@@ -107,6 +107,42 @@ function heroArt(season) {
     </svg>`;
 }
 
+/* Dynamically populates the item grid with badges and pricing rules 
+   filtering solely by the active seasonal inventory array */
+function renderProductGallery(config, season) {
+  const container = document.getElementById('galleryContainer');
+  if (!container) return; // Keeps pages without a gallery section safe from errors
+
+  container.innerHTML = '';
+
+  // If there are no products config rules set up yet, stop execution safely
+  if (!config.products || !Array.isArray(config.products)) return;
+
+  const seasonalProducts = config.products.filter(item => item.season === season);
+
+  seasonalProducts.forEach(product => {
+    const card = document.createElement('div');
+    card.className = 'gallery-item';
+
+    card.innerHTML = `
+      ${product.badge ? `
+        <div class="item-badges">
+          <span class="badge badge-${product.badgeType || 'stock'}">${product.badge}</span>
+        </div>
+      ` : ''}
+      <img src="${product.image}" alt="${product.title}" class="gallery-img">
+      <div class="gallery-overlay">
+        <h3 class="product-title">${product.title}</h3>
+        <p class="product-tag">${season.toUpperCase()} COLLECTION</p>
+        <span class="product-price">${product.price || ''}</span>
+        <a href="#" class="view-btn">View Details</a>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+}
+
 /* Initializes shared chrome (header/footer/nav/theme) and returns
    { config, season } so the page-specific script can render its content. */
 async function initSite() {
@@ -115,5 +151,9 @@ async function initSite() {
   applySeasonTheme(season);
   fillHeaderFooter(config);
   setActiveNav();
+  
+  // Fire off automatic parsing engine for the products module grid frame
+  renderProductGallery(config, season);
+  
   return { config, season };
 }
