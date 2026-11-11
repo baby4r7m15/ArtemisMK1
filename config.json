@@ -1,11 +1,11 @@
 {
-  "business": {
-    "name": "Artemis MK 1",
+    "business": {
+    "name": "Artemis Systems",
     "tagline": {
-      "spring": "Systems green — growth season is live.",
-      "summer": "Peak season, fully deployed.",
-      "autumn": "MK 1 Beta",
-      "winter": "Winter mode engaged. Already out front."
+      "spring": "System Initialize // Diagnostic online and ready for deployment.",
+      "summer": "Active Patrol // Maximum load-out, engineered for field endurance.",
+      "autumn": "Artemis Systems MK 1 // Secure chassis, modular payload.",
+      "winter": "Condition Zero // High-tension restraint, built to withstand the elements."
     },
     "description": {
       "spring": "Startup checks, first mows, and bed prep to bring your lawn back online after winter. Locally owned and operated, serving the Boise and Meridian area since 2025",
@@ -27,30 +27,21 @@
   },
   "products": [
     {
-      "id": "classic-beta",
-      "title": "Classic Harness",
+      "id": "mk1-beta",
+      "title": "MK 1 Beta",
       "season": "autumn",
       "price": "$65.00",
       "image": "images/pupz logo 2.png",
       "badge": "Coming Soon",
-      "badgeType": "stock"
+      "badgeType": "type"
     },
     {
-      "id": "modular-beta",
-      "title": "MK 1 Beta Modular Set",
+      "id": "mk1-modular",
+      "title": "MK 1 Modular Beta",
       "season": "autumn",
       "price": "$110.00",
       "image": "images/pupz logo 2.png",
-      "badge": "Limited Edition",
-      "badgeType": "limited"
-    },
-    {
-      "id": "winter-frost",
-      "title": "Frost Guard Edition",
-      "season": "winter",
-      "price": "$75.00",
-      "image": "images/pupz logo 2.png",
-      "badge": "Pre-Order",
+      "badge": "Coming Soon",
       "badgeType": "type"
     }
   ]
