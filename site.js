@@ -56,46 +56,53 @@ function fillHeaderFooter(config) {
 }
 
 /* A single HUD-ring frame (rotating dashed ring + corner ticks) wraps a
-   season-specific circuit-style icon in the middle. Same frame every
-   season; only the icon and the accent colors (via CSS vars) change. */
+   harness-specific modular configuration icon in the middle. Same frame every
+   season; only the icon vectors and the accent colors change. */
 function heroArt(season) {
   const icons = {
+    // Spring Theme: X-strap layout with soft floral alignment points
     spring: `
-      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round">
-        <path d="M160 220 L160 120"/>
-        <path d="M160 170 C120 170, 100 140, 105 105"/>
-        <path d="M160 145 C200 145, 220 118, 218 85"/>
-        <circle cx="105" cy="102" r="5" fill="var(--accent)" stroke="none"/>
-        <circle cx="218" cy="82" r="5" fill="var(--accent-2)" stroke="none"/>
-        <circle cx="160" cy="222" r="5" fill="var(--accent-2)" stroke="none"/>
+      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M110 110 L210 210 M210 110 L110 210"/>
+        <circle cx="160" cy="160" r="14" stroke="var(--accent)" stroke-width="2.5" fill="none"/>
+        <line x1="160" y1="95" x2="160" y2="120" stroke="var(--accent-2)" />
+        <line x1="160" y1="200" x2="160" y2="225" stroke="var(--accent-2)" />
+        <circle cx="110" cy="110" r="4" fill="var(--accent-2)" stroke="none"/>
+        <circle cx="210" cy="110" r="4" fill="var(--accent-2)" stroke="none"/>
       </g>`,
+    // Summer Theme: Heavy vertical dual-strap cage style with center harness ring
     summer: `
-      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round">
-        <circle cx="160" cy="160" r="34"/>
-        <path d="M160 96 L160 76 M160 244 L160 224 M96 160 L76 160 M244 160 L224 160"/>
-        <path d="M117 117 L102 102 M203 117 L218 102 M117 203 L102 218 M203 203 L218 218"/>
-        <circle cx="160" cy="160" r="10" fill="var(--accent-2)" stroke="none"/>
+      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M130 90 L130 230 M190 90 L190 230"/>
+        <path d="M110 130 L210 130 M110 190 L210 190"/>
+        <circle cx="130" cy="130" r="5" fill="var(--accent-2)" stroke="none"/>
+        <circle cx="190" cy="130" r="5" fill="var(--accent-2)" stroke="none"/>
+        <circle cx="130" cy="190" r="5" fill="var(--accent-2)" stroke="none"/>
+        <circle cx="190" cy="190" r="5" fill="var(--accent-2)" stroke="none"/>
       </g>`,
+    // Autumn Theme: Asymmetrical cross-chest dynamic frame setup (MK 1 Beta modular layout)
     autumn: `
-      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round">
-        <path d="M100 220 C150 190, 165 140, 158 90"/>
-        <path d="M158 120 C185 112, 205 96, 208 70"/>
-        <path d="M150 165 C122 158, 100 142, 92 118"/>
-        <circle cx="208" cy="68" r="5" fill="var(--accent)" stroke="none"/>
-        <circle cx="90" cy="115" r="5" fill="var(--accent-2)" stroke="none"/>
-        <circle cx="100" cy="222" r="5" fill="var(--accent-2)" stroke="none"/>
+      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M120 100 C150 130, 160 150, 200 220"/>
+        <path d="M120 150 C150 150, 170 140, 200 100"/>
+        <path d="M100 190 L220 190"/>
+        <circle cx="160" cy="148" r="8" stroke="var(--accent-2)" stroke-width="2"/>
+        <circle cx="120" cy="100" r="4" fill="var(--accent)" stroke="none"/>
+        <circle cx="200" cy="100" r="4" fill="var(--accent-2)" stroke="none"/>
       </g>`,
+    // Winter Theme: Multi-point heavy geometric interlocking overlay structure
     winter: `
-      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round">
-        <path d="M160 110 L160 210 M118 130 L202 190 M202 130 L118 190"/>
-        <path d="M160 110 L145 128 M160 110 L175 128"/>
-        <path d="M160 210 L145 192 M160 210 L175 192"/>
-        <circle cx="160" cy="160" r="6" fill="var(--accent-2)" stroke="none"/>
+      <g stroke="var(--accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="160,85 215,130 160,235 105,130" stroke="var(--accent)"/>
+        <line x1="105" y1="130" x2="215" y2="130" stroke="var(--accent-2)" stroke-dasharray="4 4"/>
+        <circle cx="160" cy="130" r="10" stroke="var(--accent)" fill="none"/>
+        <circle cx="160" cy="85" r="4" fill="var(--accent-2)" stroke="none"/>
+        <circle cx="160" cy="235" r="4" fill="var(--accent-2)" stroke="none"/>
       </g>`,
   };
 
   return `
-    <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rotating system status ring with a seasonal icon">
+    <svg viewBox="0 0 320 320" fill="none" xmlns="http://w3.org" role="img" aria-label="Rotating system status ring with a seasonal configuration schematic">
       <g class="hud-ring-rotate" style="transform-origin:160px 160px;">
         <circle cx="160" cy="160" r="140" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="2 8"/>
       </g>
