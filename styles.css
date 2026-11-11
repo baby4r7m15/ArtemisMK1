@@ -285,6 +285,96 @@ nav.site-nav a[aria-current="page"] {
   border-right: 2px solid var(--accent);
 }
 
+/* ---------- Gallery ---------- */
+/* Gallery Layout */
+.product-gallery {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-container {
+  display: grid;
+  /* Automatically adjusts column count based on screen width (minimum 280px per item) */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Gallery Item Container */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 1 / 1; /* Keeps images perfectly square. Change to 3 / 4 for portrait rows */
+  background-color: #f9f9f9;
+}
+
+/* Image Styles */
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Hover Overlay Effect */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Typography & Button inside Overlay */
+.product-title {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 5px;
+}
+
+.product-price {
+  color: #e0e0e0;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.view-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.view-btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Interactive Hover States */
+.gallery-item:hover .gallery-overlay {
+  opacity: 1; /* Reveals the text overlay */
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05); /* Subtle zoom effect on the image */
+}
+
 /* ---------- Service cards ---------- */
 .services { padding: 8px 0 64px; }
 
