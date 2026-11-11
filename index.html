@@ -37,52 +37,16 @@
   </div>
 </section>
 
+  <!-- The script reads this block framework and fills the container -->
 <section class="product-gallery" id="seasonalGallery">
   <div class="gallery-header">
-    <h2 class="gallery-title">The Collection</h2>
-    <p class="gallery-subtitle">Handmade, custom-fit chest harnesses designed for every body.</p>
+    <h2 class="gallery-title" id="galleryTitle">The Collection</h2>
+    <p class="gallery-subtitle" id="gallerySubtitle">Handmade, custom-fit chest harnesses designed for every body.</p>
   </div>
 
-  <div class="gallery-container">
-    
-    <!-- Harness Card 1 -->
-    <div class="gallery-item">
-      <!-- Status Badges positioned on top of image -->
-      <div class="item-badges">
-        <span class="badge badge-stock">In Stock</span>
-        <span class="badge badge-type">Custom Fit</span>
-      </div>
-      
-      <img src="harness1.jpg" alt="Custom Chest Harness" class="gallery-img">
-      
-      <div class="gallery-overlay">
-        <h3 class="product-title">Classic Harness</h3>
-        <p class="product-tag">Aura Series</p>
-        <span class="product-price">$65.00</span>
-        <a href="#" class="view-btn">View Details</a>
-      </div>
-    </div>
-
-    <!-- Harness Card 2 -->
-    <div class="gallery-item">
-      <div class="item-badges">
-        <span class="badge badge-limited">Limited</span>
-      </div>
-      
-      <img src="harness2.jpg" alt="Handmade Harness" class="gallery-img">
-      
-      <div class="gallery-overlay">
-        <h3 class="product-title">Blossom Straps</h3>
-        <p class="product-tag">Seasonal Special</p>
-        <span class="product-price">$85.00</span>
-        <a href="#" class="view-btn">View Details</a>
-      </div>
-    </div>
-
-  </div>
+  <!-- JavaScript injects dynamic items strictly inside this wrapper -->
+  <div class="gallery-container" id="galleryContainer"></div>
 </section>
-
-
 
 <footer class="site-footer">
   <div class="wrap">
