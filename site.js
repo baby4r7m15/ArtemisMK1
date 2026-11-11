@@ -80,8 +80,8 @@ function heroArt(season) {
         <path d="M160 73 L160 213 M132 105 C150 108, 170 108, 188 105 M112 145 C140 150, 180 150, 208 145 M112 180 C140 183, 180 183, 208 180" stroke-width="1" opacity="0.4"/>
 
         <!-- Primary Left and Right Shoulder Straps -->
-        <path d="M110 70 L145 155 L150 210" />
-        <path d="M210 70 L175 155 L170 210" />
+        <path d="M110 70 L148 165 L151 210" />
+        <path d="M210 70 L172 165 L169 210" />
 
         <!-- Dual Top Shoulder Adjustment Buckles -->
         <rect x="100" y="95" width="16" height="12" rx="2" stroke="var(--accent-2)" stroke-width="2"/>
@@ -97,19 +97,19 @@ function heroArt(season) {
         <rect x="124" y="188" width="16" height="14" rx="2" stroke="var(--accent)" stroke-width="2"/>
         <rect x="180" y="188" width="16" height="14" rx="2" stroke="var(--accent)" stroke-width="2"/>
 
-        <!-- Central Sternal Attachment Loop (Vertical Drop Tab) -->
-        <rect x="151" y="170" width="18" height="45" rx="3" stroke="var(--accent-2)" stroke-width="2.5" fill="none"/>
-        <line x1="151" y1="185" x2="169" y2="185" stroke="var(--accent-2)" stroke-width="1.5"/>
-        <line x1="151" y1="200" x2="169" y2="200" stroke="var(--accent-2)" stroke-width="1.5"/>
+        <!-- Central Sternal Attachment Loop (Slimmed Down Drop Tab) -->
+        <rect x="153" y="170" width="14" height="42" rx="2" stroke="var(--accent-2)" stroke-width="2.5" fill="none"/>
+        <line x1="153" y1="184" x2="167" y2="184" stroke="var(--accent-2)" stroke-width="1.5"/>
+        <line x1="153" y1="198" x2="167" y2="198" stroke="var(--accent-2)" stroke-width="1.5"/>
 
-        <!-- Bottom Security Locking Anchoring Carabiner Clip -->
-        <path d="M148 215 C140 225, 140 245, 150 255 C160 265, 175 265, 182 250 C188 238, 180 220, 168 215" stroke="var(--accent)" stroke-width="3"/>
-        <!-- Screw Gate Lock Assembly Nut Detail -->
-        <rect x="168" y="222" width="10" height="18" rx="1" fill="var(--accent-2)" stroke="none"/>
+        <!-- Refined, Proportional Locking Carabiner Clip -->
+        <path d="M156 212 L154 246 C154 256, 166 256, 166 246 L164 212" stroke="var(--accent)" stroke-width="3"/>
+        <path d="M164 216 L164 238" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+        <!-- Vertical Screw Gate Lock Assembly Nut Detail -->
+        <rect x="161" y="218" width="6" height="14" rx="1" fill="var(--accent-2)" stroke="none"/>
       </g>
     </svg>`;
 }
-
 
 /* Dynamically populates the item grid with badges and pricing rules 
    filtering solely by the active seasonal inventory array */
