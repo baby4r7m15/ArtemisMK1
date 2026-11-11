@@ -30,7 +30,7 @@
       "id": "mk1-beta",
       "title": "MK 1 Beta",
       "season": "autumn",
-      "price": "$65.00",
+      "price": "$tbd",
       "image": "images/mk-beta.png",
       "badge": "Coming Soon",
       "badgeType": "type"
@@ -39,7 +39,7 @@
       "id": "mk1-modular",
       "title": "MK 1 Modular Beta",
       "season": "autumn",
-      "price": "$110.00",
+      "price": "$tbd",
       "image": "images/mk-beta.png",
       "badge": "Coming Soon",
       "badgeType": "type"
