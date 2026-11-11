@@ -23,16 +23,16 @@
     "springStart": "03-01",
     "summerStart": "06-01",
     "autumnStart": "09-01",
-    "winterStart": "11-01"
+    "winterStart": "12-01"
   },
   "products": [
     {
-      "id": "classic-pink",
-      "title": "Classic Pink Harness",
+      "id": "classic-beta",
+      "title": "Classic Harness",
       "season": "autumn",
       "price": "$65.00",
       "image": "images/pupz logo 2.png",
-      "badge": "In Stock",
+      "badge": "Coming Soon",
       "badgeType": "stock"
     },
     {
