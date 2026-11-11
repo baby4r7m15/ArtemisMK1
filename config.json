@@ -31,7 +31,7 @@
       "title": "Classic Pink Harness",
       "season": "autumn",
       "price": "$65.00",
-      "image": "images/pink-harness.jpg",
+      "image": "images/pupz logo 2.png",
       "badge": "In Stock",
       "badgeType": "stock"
     },
@@ -40,7 +40,7 @@
       "title": "MK 1 Beta Modular Set",
       "season": "autumn",
       "price": "$110.00",
-      "image": "images/modular-beta.jpg",
+      "image": "images/pupz logo 2.png",
       "badge": "Limited Edition",
       "badgeType": "limited"
     },
@@ -49,7 +49,7 @@
       "title": "Frost Guard Edition",
       "season": "winter",
       "price": "$75.00",
-      "image": "images/winter-frost.jpg",
+      "image": "images/pupz logo 2.png",
       "badge": "Pre-Order",
       "badgeType": "type"
     }
