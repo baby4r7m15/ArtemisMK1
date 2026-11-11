@@ -1,0 +1,244 @@
+{
+  "business": {
+    "name": "Artemis Lawn and Leaf",
+    "tagline": {
+      "spring": "Systems green — growth season is live.",
+      "summer": "Peak season, fully deployed.",
+      "autumn": "Artemis Lawn and Leaf is currently closed!",
+      "winter": "Winter mode engaged. Already out front."
+    },
+    "description": {
+      "spring": "Startup checks, first mows, and bed prep to bring your lawn back online after winter. Locally owned and operated, serving the Boise and Meridian area since 2025",
+      "summer": "Weekly mowing and weeding to keep your lawn looking fresh and green through the heat. lawn running at full performance through the heat. Locally owned and operated, serving the Boise and Meridian area since 2025.",
+      "autumn": "We handle the leaf drop and the last remaining weeds before the ground freezes. Locally owned and operated, serving the Boise and Meridian area since 2025.",
+      "winter": "From driveways to walkways, we keep your property clear and safe through the coldest months. Locally owned and operated, serving the Boise and Meridian area since 2025."
+    },
+    "phone": " Text: (208)994-5679",
+    "email": "artielawnandleaf@gmail.com",
+    "address": "Serving Boise and Meridian Idaho",
+    "hours": "Temporarily Closed"
+  },
+
+  "season": {
+    "_comment": "Dates are MM-DD, compared against today's date. Each season runs from its own start date up to the next season's start date, in order spring -> summer -> autumn -> winter -> spring. Change any of these to shift when the site's theme switches.",
+    "springStart": "03-01",
+    "summerStart": "06-01",
+    "autumnStart": "09-01",
+    "winterStart": "12-01"
+  },
+
+  "services": {
+    "spring": [
+      {
+        "title": "Spring Startup",
+        "price": "From $",
+        "blurb": ""
+      },
+      {
+        "title": "Fertilization",
+        "price": "From $",
+        "blurb": ""
+      },
+      {
+        "title": "Mulch & Bed Refresh",
+        "price": "From $",
+        "blurb": ""
+      }
+    ],
+    "summer": [
+      {
+        "title": "Weekly Mowing",
+        "price": "From $50/visit",
+        "blurb": "Consistent mowing and trimming on a weekly cycle through peak growth."
+      },
+      {
+        "title": "Weeding",
+        "price": "From $55",
+        "blurb": "Targeted treatment to keep weeds and summer pests off your lawn."
+      }
+    ],
+    "autumn": [
+      {
+        "title": "Fall Cleanup",
+        "price": "From $85",
+        "blurb": "Leaf removal, bed clearing, and last minute weeding to close out the season."
+      },
+      {
+        "title": "Gutter & Yard Debris",
+        "price": "From $150",
+        "blurb": "Gutter clearing and yard debris haul-away, so nothing clogs when the spring melt hits."
+      }
+    ],
+    "winter": [
+      {
+        "title": "Snow Removal",
+        "price": "From $45/visit",
+        "blurb": "Driveway and walkway clearing, plowed or shoveled after every snowfall."
+      },
+      {
+        "title": "Ice Management",
+        "price": "From $35",
+        "blurb": "Sand and de-icing treatment for safe footing on steps and walkways."
+      },
+      {
+        "title": "Holiday Light Teardown",
+        "price": "From $75",
+        "blurb": "Takedown, untangling, and storage of holiday lighting once the season wraps."
+      }
+    ]
+  },
+
+  "pricing": {
+    "spring": [
+      {
+        "plan": "Single Visit",
+        "price": "$",
+        "period": "per visit",
+        "details": "",
+        "featured": false
+      },
+      {
+        "plan": "Monthly Care",
+        "price": "$",
+        "period": "per month",
+        "details": "",
+        "featured": true
+      },
+      {
+        "plan": "Full Season",
+        "price": "$",
+        "period": "Mar – May",
+        "details": "",
+        "featured": false
+      }
+    ],
+    "summer": [
+      {
+        "plan": "Per Visit",
+        "price": "$",
+        "period": "per mow",
+        "details": "",
+        "featured": false
+      },
+      {
+        "plan": "Weekly Plan",
+        "price": "$",
+        "period": "per month",
+        "details": "",
+        "featured": true
+      },
+      {
+        "plan": "Full Season",
+        "price": "$",
+        "period": "Jun – Aug",
+        "details": "",
+        "featured": false
+      }
+    ],
+    "autumn": [
+      {
+        "plan": "Single Visit",
+        "price": "$85",
+        "period": "per visit",
+        "details": "One-time fall cleanup: leaves, beds, and yard waste.",
+        "featured": false
+      },
+      {
+        "plan": "Monthly Care",
+        "price": "$140",
+        "period": "per month",
+        "details": "Weekly leaf removal, bed and yard cleaning.",
+        "featured": true
+      },
+      {
+        "plan": "Full Season",
+        "price": "$360",
+        "period": "Sep – Nov",
+        "details": "Everything above, scheduled and paid up front.",
+        "featured": false
+      }
+    ],
+    "winter": [
+      {
+        "plan": "Per Visit",
+        "price": "$45",
+        "period": "per snowfall",
+        "details": "Driveway and walkway clearing after each snowfall.",
+        "featured": false
+      },
+      {
+        "plan": "Monthly Plan",
+        "price": "$150",
+        "period": "per month",
+        "details": "Unlimited clearing plus ice treatment on steps and walks.",
+        "featured": true
+      },
+      {
+        "plan": "Full Season",
+        "price": "$520",
+        "period": "Dec – Feb",
+        "details": "Unlimited clearing and ice treatment, all winter. Save 15%.",
+        "featured": false
+      }
+    ]
+  },
+
+  "calendar": {
+    "spring": [
+      {
+        "month": "March",
+        "tasks": []
+      },
+      {
+        "month": "April",
+        "tasks": []
+      },
+      {
+        "month": "May",
+        "tasks": []
+      }
+    ],
+    "summer": [
+      {
+        "month": "June",
+        "tasks": []
+      },
+      {
+        "month": "July",
+        "tasks": []
+      },
+      {
+        "month": "August",
+        "tasks": []
+      }
+    ],
+    "autumn": [
+      {
+        "month": "September",
+        "tasks": ["Weed treatment", "Schedule fall cleanup"]
+      },
+      {
+        "month": "October",
+        "tasks": ["Leaf removal begins", "Yard debris cleanup"]
+      },
+      {
+        "month": "November",
+        "tasks": ["Final leaf pickup", "Gutter clearing"]
+      }
+    ],
+    "winter": [
+      {
+        "month": "December",
+        "tasks": ["Snow removal on call", "Holiday light teardown", "Ice treatment as needed"]
+      },
+      {
+        "month": "January",
+        "tasks": ["Snow removal on call", "Ice treatment as needed"]
+      },
+      {
+        "month": "February",
+        "tasks": ["Snow removal on call", "Ice treatment as needed", "Spring plan consultations"]
+      }
+    ]
+  }
+}
