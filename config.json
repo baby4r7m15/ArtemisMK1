@@ -10,7 +10,7 @@
     "description": {
       "spring": "Startup checks, first mows, and bed prep to bring your lawn back online after winter. Locally owned and operated, serving the Boise and Meridian area since 2025",
       "summer": "Weekly mowing and weeding to keep your lawn looking fresh and green through the heat. lawn running at full performance through the heat. Locally owned and operated, serving the Boise and Meridian area since 2025.",
-      "autumn": "The Artemis MK.I is a modular, form-fitting technical chest harness handcrafted from durable 500D Cordura Nylon and breathable spacer mesh. It features a sleek matte black and neon pink tactical silhouette complete with padded adjustable shoulder straps, quick-release buckles, and customizable velcro mounting panels.",
+      "autumn": "The Artemis MK.I is a modular, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear. Handcrafted from durable 500D Cordura Nylon and breathable spacer mesh, it combines the recognizable structure and functionality of a service-dog harness with an ergonomic, human-adapted fit.",
       "winter": "From driveways to walkways, we keep your property clear and safe through the coldest months. Locally owned and operated, serving the Boise and Meridian area since 2025."
     },
     "phone": " Text: (208)994-5679",
@@ -31,16 +31,7 @@
       "title": "MK 1 Beta",
       "season": "autumn",
       "price": "$tbd",
-      "image": "images/mk1-beta.png",
-      "badge": "Coming Soon",
-      "badgeType": "type"
-    },
-    {
-      "id": "mk1-modular",
-      "title": "MK 1 Modular Beta",
-      "season": "autumn",
-      "price": "$tbd",
-      "image": "images/mk1-beta.png",
+      "image": "images/mk1-beta-1-1.png",
       "badge": "Coming Soon",
       "badgeType": "type"
     }
