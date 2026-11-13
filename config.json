@@ -29,12 +29,39 @@
     {
       "id": "mk1-beta",
       "title": "MK 1 Beta",
+      "tagline": "Artemis Systems MK 1 // Secure chassis, modular payload.",
       "season": "autumn",
       "price": "$tbd",
-      "image": "images/mk1_beta-1-1.png",
       "badge": "Coming Soon",
       "badgeType": "type",
-      "url": "mk1.html"
+      "url": "mk1.html",
+      "image": "images/mk1_beta-1-1.png",
+      "gallery": [
+        {
+          "src": "images/mk1_beta-1-1.png",
+          "alt": "Artemis MK.I Chest Harness - Front View"
+        }
+      ],
+      "description": "The Artemis MK.I is a modular, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear. Built on a heavy-duty 1050D nylon chassis with breathable padded air-mesh lining, it pairs authentic K9 harness hardware and MOLLE webbing with an ergonomic, human-adapted shoulder and torso fit.",
+      "ctaText": "Join our Discord for updates",
+      "ctaUrl": "https://discord.gg",
+      "specs": [
+        {
+          "title": "01 // Heavy-Duty K9 Chassis",
+          "tag": "1050D NYLON & AIR-MESH",
+          "detail": "Constructed from rugged 1050D nylon with a soft, breathable air-mesh lining, side MOLLE webbing rails, and a heavy-duty lower steel D-ring."
+        },
+        {
+          "title": "02 // Re-Engineered Shoulder Rigging",
+          "tag": "METAL BUCKLES & 1\" D-RINGS",
+          "detail": "Re-angled vertical 1-inch webbing straps with dual welded metal D-rings and quick-release metal shoulder buckles eliminate collar pinch and upper chest flare."
+        },
+        {
+          "title": "03 // Segmented 6-Point Fit",
+          "tag": "ARTICULATED BACK YOKE",
+          "detail": "Two-piece segmented back harness anchors naturally between the shoulder blades and across the lower ribs with 6-point strap adjustment and a centered hook-and-loop patch placard."
+        }
+      ]
     }
   ]
 }
