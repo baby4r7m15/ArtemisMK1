@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Uh oh!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" sizes="512x512" href="https://i.imgur.com/tT0xGUr.png" />
+<link rel="apple-touch-icon" href="https://i.imgur.com/tT0xGUr.png" />
+<meta name="theme-color" content="#fff0f7" id="themeColorMeta" />
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+body{
+  font-family:"Montserrat",sans-serif;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(
+  to bottom,
+  #070a0d 100%
+);
+
+  color: var(--foreground);
+
+  min-height: 100vh;
+}
+/* sparkles */
+.sparkles{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.9) 1.5px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 2px);
+  background-size:120px 120px, 160px 160px;
+  animation: float 10s linear infinite;
+  opacity:.6;
+}
+
+@keyframes float{
+  0%{ transform:translateY(0); }
+  50%{ transform:translateY(-20px); }
+  100%{ transform:translateY(0); }
+}
+
+.card{
+  background:rgba(255,255,255,.7);
+  border:1px solid rgba(255,180,215,.35);
+  border-radius:28px;
+  padding:40px 32px;
+  width:min(420px,90%);
+  text-align:center;
+  backdrop-filter:blur(16px);
+  box-shadow:0 20px 60px rgba(255,182,215,.25);
+}
+
+.title{
+  font-weight:800;
+  letter-spacing:.1em;
+  font-size:1.4rem;
+  color:#ffb6c1;
+  text-shadow:0 0 14px rgba(255,190,230,.7);
+}
+
+.subtitle{
+  margin-top:8px;
+  font-size:.8rem;
+  letter-spacing:.18em;
+  color:rgba(120,100,140,.7);
+}
+
+.status{
+  margin-top:28px;
+  font-size:.95rem;
+  font-weight:600;
+}
+
+.status span{
+  color:#ff9ed1;
+}
+
+/* 🐾 PUPPY LOADER */
+.puppy-loader{
+  position: relative;
+  width: 132px;
+  height: 132px;
+  margin: 26px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: puppyFloat 3.2s ease-in-out infinite;
+}
+
+.puppy-face{
+  width: 104px;
+  height: 104px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255,255,255,.72);
+  box-shadow:
+    0 10px 28px rgba(255,182,215,.26),
+    0 0 22px rgba(255,255,255,.55);
+}
+
+@keyframes puppyFloat{
+  0%,100%{ transform: translateY(0); }
+  50%{ transform: translateY(-4px); }
+}
+
+.msg{
+  margin-top:20px;
+  font-size:.85rem;
+  color:rgba(120,100,140,.75);
+}
+
+.heart{
+  margin-top:12px;
+  font-size:1.4rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{ transform:scale(1); }
+  50%{ transform:scale(1.2); }
+}
+</style>
+</head>
+
+<body>
+<div class="sparkles"></div>
+
+<div class="card">
+  <div class="title">Artemis Systems</div>
+  <div class="subtitle">SYSTEM: Updates Underway!</div>
+
+  <!--<div class="status">
+    please wait… <span>new stuffs incoming!</span>
+  </div>-->
+
+  <div class="puppy-loader">
+    <img src="https://i.imgur.com/tT0xGUr.png" class="puppy-face" />
+  </div>
+
+  <div class="msg" id="msg">
+    We apologize for the inconvenience, please check back again soon!
+  </div>
+
+  <div class="heart">♡</div>
+</div>
+</body>
+</html>
