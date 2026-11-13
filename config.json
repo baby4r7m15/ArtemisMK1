@@ -1,5 +1,5 @@
 {
-    "business": {
+  "business": {
     "name": "Artemis Systems",
     "tagline": {
       "spring": "System Initialize // Diagnostic online and ready for deployment.",
@@ -33,7 +33,8 @@
       "price": "$tbd",
       "image": "images/mk1_beta-1-1.png",
       "badge": "Coming Soon",
-      "badgeType": "type"
+      "badgeType": "type",
+      "url": "mk1.html"
     }
   ]
 }
