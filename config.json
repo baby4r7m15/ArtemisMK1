@@ -8,15 +8,15 @@
       "winter": "Condition Zero // High-tension restraint, built to withstand the elements."
     },
     "description": {
-      "spring": "Startup checks, first mows, and bed prep to bring your lawn back online after winter. Locally owned and operated, serving the Boise and Meridian area since 2025",
-      "summer": "Weekly mowing and weeding to keep your lawn looking fresh and green through the heat. lawn running at full performance through the heat. Locally owned and operated, serving the Boise and Meridian area since 2025.",
-      "autumn": "The Artemis MK.I is a modular, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear. Handcrafted from durable 500D Cordura Nylon and breathable spacer mesh, it combines the recognizable structure and functionality of a service-dog harness with an ergonomic, human-adapted fit.",
-      "winter": "From driveways to walkways, we keep your property clear and safe through the coldest months. Locally owned and operated, serving the Boise and Meridian area since 2025."
+      "spring": "The Artemis MK.I is a custom, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear.",
+      "summer": "The Artemis MK.I is a custom, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear.",
+      "autumn": "The Artemis MK.I is a custom, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear.",
+      "winter": "The Artemis MK.I is a custom, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear."
     },
-    "phone": " Text: (208)994-5679",
-    "email": "artielawnandleaf@gmail.com",
-    "address": "Serving Boise and Meridian Idaho",
-    "hours": "Temporarily Closed"
+    "phone": "",
+    "email": "",
+    "address": "",
+    "hours": "Early Access."
   },
   "season": {
     "_comment": "Dates are MM-DD, compared against today's date. Each season runs from its own start date up to the next season's start date, in order spring -> summer -> autumn -> winter -> spring. Change any of these to shift when the site's theme switches.",
