@@ -34,7 +34,7 @@ function applySeasonTheme(season) {
 }
 
 function setActiveNav() {
-  const path = location.pathname.split('/').pop() || 'index.html';
+  const path = location.pathname.split('/').pop() || 'home.html';
   document.querySelectorAll('nav.site-nav a').forEach(link => {
     const href = link.getAttribute('href');
     if (href === path) link.setAttribute('aria-current', 'page');
