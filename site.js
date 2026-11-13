@@ -17,7 +17,7 @@ function getSeason(config, now = new Date()) {
     ['summer', config.season.summerStart],
     ['autumn', config.season.autumnStart],
     ['winter', config.season.winterStart],
-  ].sort((a, b) => (a[1] < b[1] ? -1 : 1));
+  ].sort((a, b) => (a < b ? -1 : 1));
 
   // Default to the last season of the year (wraps around for dates
   // before the first configured start, e.g. January before springStart).
@@ -145,6 +145,77 @@ function renderProductGallery(config, season) {
 
     container.appendChild(card);
   });
+}
+
+/* Populates a dedicated product page using its matching ID inside config.products */
+function renderProductById(config, productId) {
+  if (!config.products || !Array.isArray(config.products)) return;
+
+  const product = config.products.find(p => p.id === productId);
+  if (!product) return;
+
+  document.title = `AS | ${product.title}`;
+
+  const setText = (id, text) => {
+    const el = document.getElementById(id);
+    if (el && text !== undefined) el.textContent = text;
+  };
+
+  setText('product-tagline', product.tagline || '');
+  setText('product-title', product.title);
+  setText('product-price', product.price);
+  setText('product-badge', product.badge);
+  setText('product-description', product.description);
+
+  // Wire Discord CTA button
+  const ctaBtn = document.getElementById('product-cta-btn');
+  if (ctaBtn) {
+    if (product.ctaText) ctaBtn.textContent = product.ctaText;
+    if (product.ctaUrl) ctaBtn.href = product.ctaUrl;
+  }
+
+  // Populate main image + thumbnail strip from gallery array (or fallback to primary image)
+  const images = (product.gallery && product.gallery.length)
+    ? product.gallery
+    : [{ src: product.image, alt: product.title }];
+
+  const mainImg = document.getElementById('mainProductImg');
+  if (mainImg && images[0]) {
+    mainImg.src = images[0].src;
+    mainImg.alt = images[0].alt || product.title;
+  }
+
+  const thumbStrip = document.getElementById('thumbStrip');
+  if (thumbStrip) {
+    thumbStrip.innerHTML = images.map((img, idx) => `
+      <button type="button" class="thumb-btn ${idx === 0 ? 'active' : ''}" data-src="${img.src}" data-alt="${img.alt || product.title}">
+        <img src="${img.src}" alt="${img.alt || product.title}">
+      </button>
+    `).join('');
+
+    thumbStrip.querySelectorAll('.thumb-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (mainImg) {
+          mainImg.src = btn.dataset.src;
+          mainImg.alt = btn.dataset.alt;
+        }
+        thumbStrip.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  }
+
+  // Populate technical specs cards from JSON
+  const specsGrid = document.getElementById('product-specs-grid');
+  if (specsGrid && Array.isArray(product.specs)) {
+    specsGrid.innerHTML = product.specs.map(spec => `
+      <div class="service-card hud-panel">
+        <h3>${spec.title}</h3>
+        <span class="price mono">${spec.tag}</span>
+        <p>${spec.detail}</p>
+      </div>
+    `).join('');
+  }
 }
 
 /* Initializes shared chrome (header/footer/nav/theme) and returns
