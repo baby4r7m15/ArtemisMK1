@@ -3,129 +3,164 @@
 <head>
 <meta charset="UTF-8" />
 <title>Uh oh!</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <link rel="icon" type="image/png" sizes="512x512" href="https://i.imgur.com/tT0xGUr.png" />
 <link rel="apple-touch-icon" href="https://i.imgur.com/tT0xGUr.png" />
-<meta name="theme-color" content="#fff0f7" id="themeColorMeta" />
+<meta name="theme-color" content="#070a0d" id="themeColorMeta" />
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
 
-*{ margin:0; padding:0; box-sizing:border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-body{
-  font-family:"Montserrat",sans-serif;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background: linear-gradient(
-  to bottom,
-  #070a0d 100%
-);
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #070a0d;
+}
 
-  color: var(--foreground);
-
+body {
+  font-family: "Montserrat", sans-serif;
+  /* Use min-height with 100dvh so mobile browser address bars don't cut off content */
   min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #070a0d 100%);
+  color: var(--foreground, #333);
+  /* Safe area padding for notched phones + breathing room on small screens */
+  padding: max(20px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(20px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  position: relative;
 }
-/* sparkles */
-.sparkles{
-  position:absolute;
-  inset:0;
-  pointer-events:none;
+
+/* Sparkles */
+.sparkles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
   background-image:
-    radial-gradient(circle, rgba(255,255,255,.9) 1.5px, transparent 2px),
-    radial-gradient(circle, rgba(255,255,255,.8) 1px, transparent 2px);
-  background-size:120px 120px, 160px 160px;
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 1.5px, transparent 2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 2px);
+  background-size: 120px 120px, 160px 160px;
   animation: float 10s linear infinite;
-  opacity:.6;
+  opacity: 0.6;
+  z-index: 0;
 }
 
-@keyframes float{
-  0%{ transform:translateY(0); }
-  50%{ transform:translateY(-20px); }
-  100%{ transform:translateY(0); }
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
 }
 
-.card{
-  background:rgba(255,255,255,.7);
-  border:1px solid rgba(255,180,215,.35);
-  border-radius:28px;
-  padding:40px 32px;
-  width:min(420px,90%);
-  text-align:center;
-  backdrop-filter:blur(16px);
-  box-shadow:0 20px 60px rgba(255,182,215,.25);
+.card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 180, 215, 0.35);
+  border-radius: clamp(20px, 5vw, 28px);
+  /* Fluid padding scales smoothly between small phones and desktop */
+  padding: clamp(28px, 6vw, 40px) clamp(20px, 5vw, 32px);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(255, 182, 215, 0.25);
 }
 
-.title{
-  font-weight:800;
-  letter-spacing:.1em;
-  font-size:1.4rem;
-  color:#ffb6c1;
-  text-shadow:0 0 14px rgba(255,190,230,.7);
+.title {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: clamp(1.2rem, 5vw, 1.45rem);
+  color: #ffb6c1;
+  text-shadow: 0 0 14px rgba(255, 190, 230, 0.7);
+  line-height: 1.2;
 }
 
-.subtitle{
-  margin-top:8px;
-  font-size:.8rem;
-  letter-spacing:.18em;
-  color:rgba(120,100,140,.7);
+.subtitle {
+  margin-top: 8px;
+  font-size: clamp(0.7rem, 3vw, 0.8rem);
+  letter-spacing: 0.14em;
+  color: rgba(120, 100, 140, 0.8);
+  line-height: 1.4;
 }
 
-.status{
-  margin-top:28px;
-  font-size:.95rem;
-  font-weight:600;
+.status {
+  margin-top: 24px;
+  font-size: clamp(0.85rem, 3.5vw, 0.95rem);
+  font-weight: 600;
 }
 
-.status span{
-  color:#ff9ed1;
+.status span {
+  color: #ff9ed1;
 }
 
 /* 🐾 PUPPY LOADER */
-.puppy-loader{
+.puppy-loader {
   position: relative;
-  width: 132px;
-  height: 132px;
-  margin: 26px auto 0;
+  width: clamp(104px, 28vw, 132px);
+  height: clamp(104px, 28vw, 132px);
+  margin: clamp(18px, 4vw, 26px) auto 0;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: puppyFloat 3.2s ease-in-out infinite;
 }
 
-.puppy-face{
-  width: 104px;
-  height: 104px;
+.puppy-face {
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid rgba(255,255,255,.72);
+  border: 4px solid rgba(255, 255, 255, 0.72);
   box-shadow:
-    0 10px 28px rgba(255,182,215,.26),
-    0 0 22px rgba(255,255,255,.55);
+    0 10px 28px rgba(255, 182, 215, 0.26),
+    0 0 22px rgba(255, 255, 255, 0.55);
 }
 
-@keyframes puppyFloat{
-  0%,100%{ transform: translateY(0); }
-  50%{ transform: translateY(-4px); }
+@keyframes puppyFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
 
-.msg{
-  margin-top:20px;
-  font-size:.85rem;
-  color:rgba(120,100,140,.75);
+.msg {
+  margin-top: 18px;
+  font-size: clamp(0.8rem, 3.4vw, 0.85rem);
+  line-height: 1.5;
+  color: rgba(120, 100, 140, 0.85);
 }
 
-.heart{
-  margin-top:12px;
-  font-size:1.4rem;
+.heart {
+  margin-top: 12px;
+  font-size: 1.4rem;
+  color: #ff9ed1;
   animation: pulse 1.5s infinite;
 }
 
-@keyframes pulse{
-  0%,100%{ transform:scale(1); }
-  50%{ transform:scale(1.2); }
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Landscape mode on short mobile screens */
+@media (max-height: 500px) and (orientation: landscape) {
+  .card {
+    padding: 20px 24px;
+  }
+  .puppy-loader {
+    width: 84px;
+    height: 84px;
+    margin-top: 12px;
+  }
+  .msg {
+    margin-top: 12px;
+  }
 }
 </style>
 </head>
@@ -142,7 +177,7 @@ body{
   </div>-->
 
   <div class="puppy-loader">
-    <img src="https://i.imgur.com/tT0xGUr.png" class="puppy-face" />
+    <img src="https://i.imgur.com/tT0xGUr.png" alt="Puppy icon" class="puppy-face" />
   </div>
 
   <div class="msg" id="msg">
