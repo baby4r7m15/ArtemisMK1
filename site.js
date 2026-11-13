@@ -17,11 +17,11 @@ function getSeason(config, now = new Date()) {
     ['summer', config.season.summerStart],
     ['autumn', config.season.autumnStart],
     ['winter', config.season.winterStart],
-  ].sort((a, b) => (a < b ? -1 : 1));
+  ].sort((a, b) => (a[1] < b[1] ? -1 : 1));
 
   // Default to the last season of the year (wraps around for dates
   // before the first configured start, e.g. January before springStart).
-  let current = entries[entries.length - 1];
+  let current = entries[entries.length - 1][0];
   for (const [name, start] of entries) {
     if (mmdd >= start) current = name;
     else break;
