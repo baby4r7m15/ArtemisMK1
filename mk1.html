@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AS | Artemis MK.I Harness</title>
+<title>AS | MK 1 Beta</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="mk1.css">
 </head>
-<body data-page="product">
+<body data-page="product" data-product-id="mk1-beta">
 
 <header class="site-header">
   <div class="wrap">
     <div class="brand-group">
-      <a href="index.html" class="brand" data-brand>Artemis Systems</a>
+      <a href="index.html" class="brand" data-brand></a>
       <span class="status-pill"><span class="dot"></span>SYSTEM ONLINE</span>
     </div>
     <nav class="site-nav">
@@ -24,39 +24,28 @@
 
 <section class="hero product-showcase">
   <div class="wrap">
-    <!-- Left Column: Product Photos -->
+    <!-- Left Column: Product Photos (Loaded from config.json) -->
     <div class="hero-art product-media">
       <div class="hud-panel main-image-frame">
-        <img id="mainProductImg" src="images/mk1_beta-1-1.png" alt="Artemis MK.I Chest Harness - Main Prototype View">
+        <img id="mainProductImg" src="" alt="">
       </div>
-      <div class="thumb-strip" id="thumbStrip">
-        <button type="button" class="thumb-btn active" onclick="swapProductImg(this, 'images/mk1_beta-1-1.png', 'Artemis MK.I Front View')">
-          <img src="images/mk1_beta-1-1.png" alt="Front View">
-        </button>
-        <!-- Add more thumbnail buttons below as you take additional photos -->
-        <!--
-        <button type="button" class="thumb-btn" onclick="swapProductImg(this, 'images/mk1_beta-1-2.png', 'Artemis MK.I Detail View')">
-          <img src="images/mk1_beta-1-2.png" alt="Detail View">
-        </button>
-        -->
-      </div>
+      <div class="thumb-strip" id="thumbStrip"></div>
     </div>
 
-    <!-- Right Column: Product Info, Status & Options -->
+    <!-- Right Column: Product Info, Status & Options (Loaded from config.json) -->
     <div class="hero-text">
-      <p class="tagline">Artemis Systems MK 1 // Secure chassis, modular payload.</p>
-      <h1>Artemis MK.I Chest Harness</h1>
+      <p class="tagline" id="product-tagline"></p>
+      <h1 id="product-title"></h1>
 
       <div class="price-meta-row">
-        <span class="mono mk1-price-tag">$TBD</span>
+        <span class="mono mk1-price-tag" id="product-price"></span>
         <span class="status-pill">
-          <span class="dot"></span>COMING SOON · BETA PROTOTYPING
+          <span class="dot"></span>
+          <span id="product-badge"></span>
         </span>
       </div>
 
-      <p class="description">
-        The Artemis MK.I is a modular, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear. Handcrafted from durable 500D Cordura Nylon and breathable spacer mesh, it combines the recognizable structure and functionality of a service-dog harness with an ergonomic, human-adapted fit.
-      </p>
+      <p class="description" id="product-description"></p>
 
       <!-- Sizing & Colorway Selector -->
       <div class="hud-panel hud-select-group">
@@ -81,46 +70,27 @@
       </div>
 
       <div class="cta-row">
-        <a class="btn primary" href="mailto:artielawnandleaf@://gmail.com" id="mk1-inquiry-btn">Join Beta Waitlist / Inquire</a>
+        <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer" id="product-cta-btn">Join our Discord for updates</a>
         <a class="btn secondary" href="#specs">Technical Specs</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Technical Specs Grid -->
+<!-- Technical Specs Grid (Loaded from config.json) -->
 <section class="specs-section" id="specs">
   <div class="wrap">
     <div class="section-head">
       <h2>Chassis &amp; Hardware Specifications</h2>
     </div>
-
-    <div class="card-row">
-      <div class="service-card hud-panel">
-        <h3>01 // Cordura &amp; Spacer Mesh</h3>
-        <span class="price mono">500D NYLON</span>
-        <p>Abrasion-resistant 500D Cordura exterior paired with padded, breathable spacer mesh for comfortable extended or overnight wear.</p>
-      </div>
-
-      <div class="service-card hud-panel">
-        <h3>02 // Human-Adapted Straps</h3>
-        <span class="price mono">VERTICAL RIGGING</span>
-        <p>Collar-free vertical shoulder straps with welded 1-inch metal D-rings and quick-release shoulder buckles eliminate neck pinch and chest flare.</p>
-      </div>
-
-      <div class="service-card hud-panel">
-        <h3>03 // Modular Placard &amp; D-Ring</h3>
-        <span class="price mono">HOOK &amp; LOOP</span>
-        <p>Centered Velcro placard supports custom embroidered patches above a heavy-duty lower steel D-ring and side MOLLE webbing.</p>
-      </div>
-    </div>
+    <div class="card-row" id="product-specs-grid"></div>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="contact-block">
-      <div><strong data-brand>Artemis Systems</strong></div>
+      <div><strong data-brand></strong></div>
       <div data-hours></div>
     </div>
   </div>
@@ -128,18 +98,10 @@
 
 <script src="site.js"></script>
 <script>
-  function swapProductImg(btn, src, altText) {
-    const mainImg = document.getElementById('mainProductImg');
-    if (mainImg) {
-      mainImg.src = src;
-      mainImg.alt = altText;
-    }
-    document.querySelectorAll('.thumb-btn').forEach(b => b.classList.remove('active'));
-    if (btn) btn.classList.add('active');
-  }
-
-  // Applies seasonal theme & shared header/footer without overriding MK.I product content
-  initSite();
+  initSite().then(({ config }) => {
+    const productId = document.body.dataset.productId;
+    renderProductById(config, productId);
+  });
 </script>
 
 </body>
