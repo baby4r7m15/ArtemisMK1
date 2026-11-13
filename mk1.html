@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AS | MK1</title>
+<title>AS | Artemis MK1 Harness</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,45 +16,118 @@
     </div>
     <nav class="site-nav">
       <a href="index.html">Home</a>
-      <!--<a href="pricing">Pricing</a>-->
-      <!--<a href="calendar">Calendar</a>-->
+      <a href="mk1.html" class="active">MK1 Harness</a>
     </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="hero-text">
-      <p class="tagline" id="tagline"></p>
-      <h1 id="business-name">AS Mk1-Beta</h1>
-      <p class="description" id="description"></p>
-      <div class="cta-row">
-        <!--<a class="btn primary" href="tel:" id="call-btn">Call now</a>
-        <a class="btn secondary" href="pricing.html">See pricing</a>-->
+<main class="wrap">
+  <!-- Main Product Showcase -->
+  <section class="hero product-showcase">
+    <div class="hero-art product-media">
+      <div class="hud-panel main-image-frame">
+        <img id="mainProductImg" src="images/mk1-front.jpg" alt="Artemis MK1 Custom Chest Harness - Front View" style="width: 100%; border-radius: 6px; display: block;">
+      </div>
+      <div class="thumbnail-row" style="display: flex; gap: 10px; margin-top: 12px;">
+        <button type="button" class="thumb-btn hud-panel" onclick="swapImage('images/mk1-front.jpg', 'Artemis MK1 Front View')" style="padding: 4px; cursor: pointer;">
+          <img src="images/mk1-front.jpg" alt="Front View" style="width: 64px; height: 64px; object-fit: cover; display: block;">
+        </button>
+        <button type="button" class="thumb-btn hud-panel" onclick="swapImage('images/mk1-detail.jpg', 'Artemis MK1 Hardware & Velcro Detail')" style="padding: 4px; cursor: pointer;">
+          <img src="images/mk1-detail.jpg" alt="Hardware Detail" style="width: 64px; height: 64px; object-fit: cover; display: block;">
+        </button>
+        <button type="button" class="thumb-btn hud-panel" onclick="swapImage('images/mk1-back.jpg', 'Artemis MK1 Segmented Back Panel')" style="padding: 4px; cursor: pointer;">
+          <img src="images/mk1-back.jpg" alt="Back Panel" style="width: 64px; height: 64px; object-fit: cover; display: block;">
+        </button>
       </div>
     </div>
-    <div class="hero-art" id="hero-art"></div>
-  </div>
-</section>
 
-  <!-- The script reads this block framework and fills the container -->
-<section class="product-gallery" id="seasonalGallery">
-  <div class="gallery-header">
-    <h2 class="gallery-title" id="galleryTitle">The Collection</h2>
-    <p class="gallery-subtitle" id="gallerySubtitle">Handmade, custom-fit chest harnesses designed for every body.</p>
-  </div>
+    <div class="hero-text product-info">
+      <p class="tagline mono" id="tagline">CUSTOM-BUILT TACTICAL UTILITY RIG</p>
+      <h1 id="product-name">Artemis MK1 Chest Harness</h1>
 
-  <!-- JavaScript injects dynamic items strictly inside this wrapper -->
-  <div class="gallery-container" id="galleryContainer"></div>
-</section>
+      <!-- Price & Availability -->
+      <div class="price-status-row" style="display: flex; align-items: center; gap: 16px; margin: 12px 0;">
+        <span class="price mono" style="font-size: 1.5rem; font-weight: bold;">$145.00</span>
+        <span class="status-pill availability-badge">
+          <span class="dot"></span>MADE TO ORDER · IN STOCK (2–3 WEEKS)
+        </span>
+      </div>
+
+      <p class="description" id="description">
+        Engineered from heavyweight 1050D nylon with a breathable padded air-mesh lining, the Artemis MK1 brings an authentic working-harness silhouette tailored specifically for human proportions. Built with straight vertical shoulder geometry, quick-release metal hardware, a centered hook-and-loop placard, and a segmented two-piece back panel that locks comfortably across your shoulder blades and lower back.
+      </p>
+
+      <!-- Sizing & Patch Customization -->
+      <div class="product-options hud-panel" style="padding: 16px; margin: 20px 0;">
+        <div style="margin-bottom: 12px;">
+          <label for="chest-size" class="mono" style="display: block; margin-bottom: 6px;">CHEST GIRTH SIZE</label>
+          <select id="chest-size" style="width: 100%; padding: 8px; background: inherit; color: inherit; border: 1px solid currentColor; border-radius: 4px;">
+            <option value="sm">Small (32" – 36" Chest)</option>
+            <option value="md" selected>Medium (36" – 40" Chest)</option>
+            <option value="lg">Large (40" – 44" Chest)</option>
+            <option value="custom">Custom Tailored Measurements</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="trim-color" class="mono" style="display: block; margin-bottom: 6px;">ACCENT & PATCH COLORWAY</label>
+          <select id="trim-color" style="width: 100%; padding: 8px; background: inherit; color: inherit; border: 1px solid currentColor; border-radius: 4px;">
+            <option value="black-pink" selected>Stealth Black / Hot Pink Embroidery</option>
+            <option value="all-black">All-Black Tactical</option>
+            <option value="custom-color">Custom Accent Request</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Primary Call to Action -->
+      <div class="cta-row">
+        <a class="btn primary" href="mailto:orders@://example.com" id="order-btn">Request Custom Build</a>
+        <a class="btn secondary" href="#specs">View Specs &amp; Fit Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Specifications & Features -->
+  <section id="specs" class="product-details" style="margin-top: 48px;">
+    <div class="gallery-header">
+      <h2>Hardware &amp; Construction Specs</h2>
+      <p class="gallery-subtitle">Built with load-bearing webbing and reinforced box-X stitching.</p>
+    </div>
+
+    <div class="specs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 20px;">
+      <div class="service-card hud-panel">
+        <h3 class="mono">01 // CHASSIS &amp; LINING</h3>
+        <p>1050D water-resistant Cordura nylon exterior paired with soft, breathable air-mesh padding for all-day or overnight comfort.</p>
+      </div>
+      <div class="service-card hud-panel">
+        <h3 class="mono">02 // HUMAN-FIT GEOMETRY</h3>
+        <p>Vertical collar-free shoulder straps with dual 1-inch welded metal D-rings and quick-release metal shoulder buckles eliminate neck pinch and upper chest flare.</p>
+      </div>
+      <div class="service-card hud-panel">
+        <h3 class="mono">03 // MODULAR PLACARD</h3>
+        <p>Centered loop-Velcro chest panel supports custom embroidered patches (such as "Service / Bunny") above a lower center steel D-ring and side MOLLE rails.</p>
+      </div>
+      <div class="service-card hud-panel">
+        <h3 class="mono">04 // SEGMENTED BACK</h3>
+        <p>Two-piece articulated back harness anchors cleanly between the shoulder blades and across the lower ribs with 6-point strap adjustment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery / Additional Views -->
+  <section class="product-gallery" id="mk1Gallery" style="margin-top: 48px;">
+    <div class="gallery-header">
+      <h2 class="gallery-title">Build Gallery &amp; Fit Showcase</h2>
+      <p class="gallery-subtitle">Handmade, custom-fit chest harnesses designed for every body.</p>
+    </div>
+    <div class="gallery-container" id="galleryContainer"></div>
+  </section>
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
     <div class="contact-block">
       <div><strong data-brand>Artemis MK 1</strong></div>
-      <!--<div>Phone: <a href="tel:" data-phone></a></div>
-      <div>Email: <a href="mailto:" data-email></a></div>
-      <div data-address></div>-->
       <div data-hours></div>
     </div>
   </div>
@@ -62,24 +135,33 @@
 
 <script src="site.js"></script>
 <script>
-  initSite().then(({ config, season }) => {
-    document.getElementById('tagline').textContent = config.business.tagline[season];
-    document.getElementById('business-name').textContent = config.business.name;
-    document.getElementById('description').textContent = config.business.description[season];
-    document.getElementById('hero-art').innerHTML = heroArt(season);
+  // Thumbnail image switcher for the product gallery
+  function swapImage(src, altText) {
+    const mainImg = document.getElementById('mainProductImg');
+    if (mainImg) {
+      mainImg.src = src;
+      mainImg.alt = altText;
+    }
+  }
 
-    const callBtn = document.getElementById('call-btn');
-    callBtn.href = `tel:${config.business.phone.replace(/[^\d+]/g, '')}`;
+  // Initialize shared site metadata WITHOUT overwriting MK1 product details
+  if (typeof initSite === 'function') {
+    initSite().then(({ config }) => {
+      if (!config || !config.business) return;
 
-    const row = document.getElementById('service-cards');
-    row.innerHTML = config.services[season].map(s => `
-      <div class="service-card hud-panel">
-        <h3>${s.title}</h3>
-        <span class="price mono">${s.price}</span>
-        <p>${s.blurb}</p>
-      </div>
-    `).join('');
-  });
+      // Only update footer/header hours if present in your JSON
+      const hoursEl = document.querySelector('[data-hours]');
+      if (hoursEl && config.business.hours) {
+        hoursEl.textContent = config.business.hours;
+      }
+
+      // Dynamically wire the order button to your JSON email if available
+      const orderBtn = document.getElementById('order-btn');
+      if (orderBtn && config.business.email) {
+        orderBtn.href = `mailto:${config.business.email}?subject=Artemis%20MK1%20Harness%20Order`;
+      }
+    }).catch(err => console.warn('Site config skipped:', err));
+  }
 </script>
 
 </body>
