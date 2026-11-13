@@ -17,11 +17,11 @@ function getSeason(config, now = new Date()) {
     ['summer', config.season.summerStart],
     ['autumn', config.season.autumnStart],
     ['winter', config.season.winterStart],
-  ].sort((a, b) => (a[1] < b[1] ? -1 : 1));
+  ].sort((a, b) => (a < b ? -1 : 1));
 
   // Default to the last season of the year (wraps around for dates
   // before the first configured start, e.g. January before springStart).
-  let current = entries[entries.length - 1][0];
+  let current = entries[entries.length - 1];
   for (const [name, start] of entries) {
     if (mmdd >= start) current = name;
     else break;
@@ -111,15 +111,15 @@ function heroArt(season) {
     </svg>`;
 }
 
-/* Dynamically populates the item grid with badges and pricing rules 
-   filtering solely by the active seasonal inventory array */
+/* Dynamically populates the item grid on index.html (skips dedicated product pages) */
 function renderProductGallery(config, season) {
+  if (document.body.dataset.page === 'product') return;
+
   const container = document.getElementById('galleryContainer');
-  if (!container) return; // Keeps pages without a gallery section safe from errors
+  if (!container) return;
 
   container.innerHTML = '';
 
-  // If there are no products config rules set up yet, stop execution safely
   if (!config.products || !Array.isArray(config.products)) return;
 
   const seasonalProducts = config.products.filter(item => item.season === season);
@@ -139,7 +139,7 @@ function renderProductGallery(config, season) {
         <h3 class="product-title">${product.title}</h3>
         <p class="product-tag">${season.toUpperCase()} COLLECTION</p>
         <span class="product-price">${product.price || ''}</span>
-        <a href="#" class="view-btn">View Details</a>
+        <a href="${product.url || '#'}" class="view-btn">View Details</a>
       </div>
     `;
 
