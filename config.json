@@ -16,7 +16,7 @@
     "phone": "",
     "email": "",
     "address": "",
-    "hours": "Early Access."
+    "hours": "Open Commissions!"
   },
   "season": {
     "_comment": "Dates are MM-DD, compared against today's date. Each season runs from its own start date up to the next season's start date, in order spring -> summer -> autumn -> winter -> spring. Change any of these to shift when the site's theme switches.",
@@ -31,9 +31,9 @@
       "title": "MK 1 Beta",
       "tagline": "Artemis Systems MK 1 // Secure chassis, modular payload.",
       "season": "autumn",
-      "price": "$tbd",
-      "badge": "Coming Soon",
-      "badgeType": "type",
+      "price": "$85+",
+      "badge": "New!",
+      "badgeType": "limited",
       "url": "/mk1",
       "image": "images/mk1_beta-1-1.png",
       "gallery": [
@@ -44,7 +44,7 @@
       ],
       "description": "The Artemis MK.I is a custom, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear. Built on a heavy-duty 1050D nylon chassis with breathable padded air-mesh lining, it pairs authentic K9 harness hardware and MOLLE webbing with an ergonomic, human-adapted shoulder and torso fit.",
       "ctaText": "Join our Discord for updates",
-      "ctaUrl": "",
+      "ctaUrl": "https://discord.gg/5TG7RREzNG",
       "specs": [
         {
           "title": "01 // Heavy-Duty K9 Chassis",
