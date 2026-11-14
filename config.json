@@ -70,6 +70,43 @@
           "detail": "Two-piece segmented back harness anchors naturally between the shoulder blades and across the lower ribs with 6-point strap adjustment and a centered hook-and-loop patch placard."
         }
       ]
+    },
+    {
+      "id": "mk1-patches",
+      "title": "MK 1 Patches",
+      "tagline": "Artemis Systems MK 1 // Secure chassis, modular payload.",
+      "season": "autumn",
+      "price": "$5+",
+      "badge": "New!",
+      "badgeType": "limited",
+      "url": "",
+      "image": "images/mk1_beta-1-1-patches.png",
+      "gallery": [
+{
+          "src": "images/mk1_beta-1-1-patches.png",
+          "alt": "Artemis MK.I Chest Harness - Patches"
+        }
+      ],
+      "description": "The Artemis MK.I is a custom, form-fitting service harness inspired by traditional working-dog harness construction, re-engineered and retrofitted specifically for human wear. Built on a heavy-duty 1050D nylon chassis with breathable padded air-mesh lining, it pairs authentic K9 harness hardware and MOLLE webbing with an ergonomic, human-adapted shoulder and torso fit.",
+      "ctaText": "Join our Discord for updates",
+      "ctaUrl": "https://discord.gg/5TG7RREzNG",
+      "specs": [
+        {
+          "title": "01 // Heavy-Duty K9 Chassis",
+          "tag": "1050D NYLON & AIR-MESH",
+          "detail": "Constructed from rugged 1050D nylon with a soft, breathable air-mesh lining, The option between chest or side MOLLE webbing rails, and a heavy-duty lower steel D-ring."
+        },
+        {
+          "title": "02 // Re-Engineered Shoulder Rigging",
+          "tag": "METAL BUCKLES & 1\" D-RINGS",
+          "detail": "Re-angled vertical 1-inch webbing straps with dual welded metal D-rings and quick-release metal shoulder buckles eliminate collar pinch and upper chest flare."
+        },
+        {
+          "title": "03 // Segmented 6-Point Fit",
+          "tag": "ARTICULATED BACK YOKE",
+          "detail": "Two-piece segmented back harness anchors naturally between the shoulder blades and across the lower ribs with 6-point strap adjustment and a centered hook-and-loop patch placard."
+        }
+      ]
     }
   ]
 }
