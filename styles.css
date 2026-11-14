@@ -220,6 +220,9 @@ nav.site-nav a[aria-current="page"] {
 .btn.primary {
   background: var(--accent);
   color: var(--bg);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn.secondary {
