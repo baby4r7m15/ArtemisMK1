@@ -78,7 +78,7 @@
       "season": "autumn",
       "price": "$5+",
       "badge": "New!",
-      "badgeType": "order",
+      "badgeType": "type",
       "url": "/patches",
       "image": "images/mk1_beta-1-1-patches.png",
       "gallery": [
@@ -94,7 +94,7 @@
         {
           "title": "01 // Bright Lettering",
           "tag": "Easy to read and understand patches",
-          "detail": "Constructed with a strong hook and loop backing with a nice pleather feel. Black background with big white letters that are easy to see and read."
+          "detail": " Cobstructed on a black background with big white letters that are easy to see and read."
         },
         {
           "title": "02 // Customized Attachment Points",
