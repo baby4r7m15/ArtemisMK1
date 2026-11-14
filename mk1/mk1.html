@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AS | MK 1 Beta</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="mk1.css">
+</head>
+<body data-page="product" data-product-id="mk1-beta">
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand-group">
+      <a href="/home" class="brand" data-brand></a>
+      <span class="status-pill"><span class="dot"></span>SYSTEM ONLINE</span>
+    </div>
+    <nav class="site-nav">
+      <a href="/home">Home</a>
+      <a href="/mk1" class="active" aria-current="page">MK 1 Beta</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero product-showcase">
+  <div class="wrap">
+    <!-- Left Column: Product Photos (Loaded from config.json) -->
+    <div class="hero-art product-media">
+      <div class="hud-panel main-image-frame">
+        <img id="mainProductImg" src="" alt="">
+      </div>
+      <div class="thumb-strip" id="thumbStrip"></div>
+    </div>
+
+    <!-- Right Column: Product Info, Status & Options (Loaded from config.json) -->
+    <div class="hero-text">
+      <p class="tagline" id="product-tagline"></p>
+      <h1 id="product-title"></h1>
+
+      <div class="price-meta-row">
+        <span class="mono mk1-price-tag" id="product-price"></span>
+        <span class="status-pill">
+          <span class="dot"></span>
+          <span id="product-badge"></span>
+        </span>
+      </div>
+
+      <p class="description" id="product-description"></p>
+
+      <!-- Sizing & Colorway Selector -->
+      <!--<div class="hud-panel hud-select-group">
+        <div>
+          <label for="chest-size" class="mono">CHEST GIRTH CONFIGURATION</label>
+          <select id="chest-size" class="hud-select">
+            <option value="Small (32&quot; - 36&quot;)">Small (32" – 36" Chest)</option>
+            <option value="Medium (36&quot; - 40&quot;)" selected>Medium (36" – 40" Chest)</option>
+            <option value="Large (40&quot; - 44&quot;)">Large (40" – 44" Chest)</option>
+            <option value="Custom Tailored Fit">Custom Tailored Measurements</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="trim-color" class="mono">CHASSIS &amp; PATCH ACCENT</label>
+          <select id="trim-color" class="hud-select">
+            <option value="Stealth Black / Hot Pink Trim" selected>Stealth Black / Hot Pink Accent</option>
+            <option value="All-Black Tactical">All-Black Tactical</option>
+            <option value="Custom Colorway">Custom Colorway Request</option>
+          </select>
+        </div>
+      </div> -->
+
+      <div class="cta-row">
+        <a class="btn primary" href="#" target="_blank" rel="noopener noreferrer" id="product-cta-btn">Join our Discord for updates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technical Specs Grid (Loaded from config.json) -->
+<section class="specs-section" id="specs">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Chassis &amp; Hardware Specifications</h2>
+    </div>
+    <div class="card-row" id="product-specs-grid"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="contact-block">
+      <div><strong data-brand></strong></div>
+      <div data-hours></div>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+<script>
+  initSite().then(({ config }) => {
+    const productId = document.body.dataset.productId;
+    renderProductById(config, productId);
+  });
+</script>
+
+</body>
+</html>
