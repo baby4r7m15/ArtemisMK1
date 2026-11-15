@@ -16,7 +16,7 @@
     "phone": "",
     "email": "",
     "address": "",
-    "hours": "Open Commissions!"
+    "hours": "In Development"
   },
   "season": {
     "_comment": "Dates are MM-DD, compared against today's date. Each season runs from its own start date up to the next season's start date, in order spring -> summer -> autumn -> winter -> spring. Change any of these to shift when the site's theme switches.",
